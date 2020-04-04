@@ -24,7 +24,7 @@ int main()
                 printf("输入错误，请重新输入\n");
             }
             SqStack *s;
-            printf(InitStack(s, size));
+            printf("%d",InitStack(s, size));
             break;
         }
         default:
