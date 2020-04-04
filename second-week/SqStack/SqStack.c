@@ -24,7 +24,7 @@ int main()
                 fflush(stdin);
                 printf("输入错误，请重新输入\n");
             }
-            printf("%d",InitStack(&s, size));
+            InitStack(&s, size);
             break;
         }
         default:
