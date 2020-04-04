@@ -1,4 +1,7 @@
+#include "header/SqStack.h"
+#include <stdio.h>
 void interface()
+
 {
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     printf("~~~~~~~ ‰»Î1  ≥ı ºªØ’ª~~~~~~~\n");
