@@ -19,7 +19,7 @@ typedef struct SqStack
 
 
 //基于数组的顺序栈
-Status InitStack(SqStack *s,int size);//初始化栈
+Status InitStack(SqStack **s,int size);//初始化栈
 Status IsEmptyStack(SqStack *s);//判断栈是否为空
 Status GetTopStack(SqStack *s,int *e); //得到栈顶元素
 Status ClearStack(SqStack *s);//清空栈

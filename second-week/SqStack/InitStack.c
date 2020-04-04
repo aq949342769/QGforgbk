@@ -1,18 +1,18 @@
 #include "header/SqStack.h"
 
- Status InitStack(SqStack *s,int size)
+ Status InitStack(SqStack **s,int size)
  {
-    s->bottom = (int *)malloc((s->size) * sizeof (int));
-    if (s->bottom == NULL)
+    *s->size = size;
+    *s->bottom = (int *)malloc((*s->size) * sizeof (int));
+    if (*s->bottom == NULL)
     {
-        return ERROR;
+        printf("初始化失败\n");
+        return ERROR;      
     }
     else
     {
-        s->top = s->bottom;
-        s->size = size; 
+        *s->top = *s->bottom;
+        *s->size = size; 
         return SUCCESS;
     }   
-    
-
  }

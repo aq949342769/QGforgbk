@@ -2,30 +2,29 @@
 #include "interface.c"
 #include "InitStack.c"
 
-Status InitStack(SqStack *s ,int size);
 int main()
 {
     int option;
+    SqStack *s;
     interface();
     while(1)
     {
         while(scanf("%d",&option) != 1)
         {
             fflush(stdin);
-            printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
+            printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
         }
         switch (option)
         {
         case 1:{
             int size;
-            printf("è¯·è¾“å…¥æ ˆçš„å¤§å°(å³å¯ä»¥è£…å‡ ä¸ªæ•°æ®)ï¼š");
+            printf("ÇëÊäÈëÕ»µÄ´óĞ¡(¼´¿ÉÒÔ×°¼¸¸öÊı¾İ)£º");
             while(scanf("%d",&size) != 1)
             {
                 fflush(stdin);
-                printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
+                printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
             }
-            SqStack *s;
-            printf("%d",InitStack(s, size));
+            printf("%d",InitStack(&s, size));
             break;
         }
         default:
