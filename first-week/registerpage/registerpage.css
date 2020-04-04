@@ -1,0 +1,75 @@
+@charset "utf-8";
+@font-face
+{
+        font-family: yishuzi;
+        src: url(font/ZaoZiGongFangTianLiTi-2.ttf);
+}
+.all{
+    background: url(images/background.jpg) ;
+    background-size: cover;   
+    /*text-align: center;*/
+    font-family: yishuzi;
+}
+div{
+    width: 300px;
+    margin: auto;
+    
+}
+.div{
+    margin-top: 150px;
+    width: 500px;
+    height: 200px;
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    
+    
+}
+#number{
+    
+    margin: 30px auto 5px;
+    width: 277px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.95;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    font-family: yishuzi;
+    font-size: 18px;
+}
+#password{
+    margin: 0px auto 10px;
+    width: 277px;
+    /*background-color: white;*/
+    opacity: 0.95;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    font-family: yishuzi;
+    font-size: 18px;
+}
+#button{
+    padding: 0;
+    width: 300px;
+    height: 30px;
+    background-color: rgba(180, 189, 222, 0.8);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: yishuzi;
+    font-size: 18px;
+
+}
+#register a{
+    color:white;
+    text-decoration: none;
+    font-size: 13px;
+    float: left;
+}
+#forget a{
+    color:white;
+    text-decoration: none;
+    font-size: 13px;
+    float: right;
+}
+
+#register a:hover{text-decoration: underline;}
+#forget a:hover{text-decoration: underline;}
