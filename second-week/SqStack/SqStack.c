@@ -1,5 +1,6 @@
 #include "header/SqStack.h"
 #include "interface.c"
+#include "InitStack.c"
 
 Status InitStack(SqStack *s ,int size);
 int main()
