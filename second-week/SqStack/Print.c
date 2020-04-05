@@ -1,6 +1,11 @@
 #include "header/SqStack.h"
 void Print(Stack s)
 {
+    if (s.bottom == NULL)
+    {
+        printf("the stack is not exist\n");
+        return;
+    }
     if (s.bottom == s.top)
     {
         printf("the stack is empty\n");

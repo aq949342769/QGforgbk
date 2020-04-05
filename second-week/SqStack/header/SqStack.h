@@ -26,7 +26,7 @@ void GetTopStack(Stack s); //得到栈顶元素
 Stack ClearStack(Stack s);//清空栈
 Stack DestroyStack(Stack s);//销毁栈
 void StackLength(Stack s);//检测栈长度
-Stack PushStack(Stack s,int data);//入栈
+Stack PushStack(Stack s);//入栈
 Stack PopStack(Stack s);//出栈
 void Print(Stack s);//遍历元素
 void interface();

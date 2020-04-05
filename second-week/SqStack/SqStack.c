@@ -16,9 +16,17 @@ int main()
     s.bottom = NULL;
     s.top = NULL;
     s.size = 0;
-    interface();
+    int count = 9;
+    
     while(1)
     {
+        //刷新菜单
+        count++;
+        while (count%10 == 0)
+        {
+            interface();break;
+        }
+        //选择菜单
         scanf("%d",&option);
         while(option < 1||option > 9)
         {
@@ -43,10 +51,12 @@ int main()
         }
         //判断栈是否为空
         case 2:{
-            if(IsEmptyStack(s))
+            if (IsEmptyStack(s) == 1)
             printf("is empty\n");
-            else
+            else if (IsEmptyStack(s) == 0)
             printf("is not empty\n");
+            else
+            printf("the stack is not exist\n");
             break;   
         }
         //得到栈顶元素
@@ -66,24 +76,16 @@ int main()
         } 
         //入栈
         case 6:{
-            int data;
-            printf("data:");
-            while(scanf("%d",&data) != 1)
-            {
-                fflush(stdin);
-                printf("enter failed,check and try again\n");
-            }
-            s = PushStack(s,data);
-            printf("success!\n");
+            s = PushStack(s);
             break;
         }
         //出栈
         case 7:{
-            PopStack(s);
+            s = PopStack(s);
             break;
         }
       
-
+        //遍历栈元素
         case 8:{
             Print(s);
             break;

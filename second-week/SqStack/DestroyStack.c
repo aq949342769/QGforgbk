@@ -2,6 +2,11 @@
 
 Stack DestroyStack(Stack s)
 {
+    if (s.bottom == NULL)
+    {
+        printf("the stack is not exist\n");
+        return s;
+    }
     free(s.bottom);
     s.size = 0;
     s.top = NULL;
