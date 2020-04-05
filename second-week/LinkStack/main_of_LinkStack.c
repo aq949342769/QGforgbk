@@ -45,11 +45,9 @@ int main()
         //判断栈是否为空
         case 2:{
             if (isEmptyLStack(&stack) == 1)
-            printf("is empty\n");
+            printf("is empty or not exist\n");
             else if (isEmptyLStack(&stack) == 0)
             printf("is not empty\n");
-            else
-            printf("the stack is not exist\n");
             break;   
         }
         //得到栈顶元素
@@ -72,13 +70,19 @@ int main()
         //销毁栈
         case 5:{
             if(destroyLStack(&stack))
-            printf("the stack was destroied!\n");
+                printf("the stack was destroied!\n");
             else
-                printf("the stack was not exist\n");
+                printf("the stack is not exist\n");
             break;
         } 
         //入栈
         case 6:{
+            if (stack.count < 0)
+            {
+                printf("the stack is not exist\n");
+                break;
+            }
+            
             ElemType data;
             printf("data:");
             while (scanf("%d",&data) != 1)
@@ -88,8 +92,8 @@ int main()
             }
             if(pushLStack(&stack, data))
             printf("push success!\n");
-            else
-            printf("the stack is not exist\n");
+            
+            
             break;
         }
         //出栈

@@ -3,12 +3,12 @@ void print(LinkStack *s)
 {
     LinkStackPtr temp = s->top;
     printf("top [");
-    while (temp->next != NULL)
+    while (temp!= NULL)
     {
         
-        printf("%d-",temp->data);
+        printf("-%d",temp->data);
         temp = temp->next;
     }
-    printf("] bottom");
+    printf("] bottom\n");
     
 }
