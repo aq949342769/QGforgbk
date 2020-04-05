@@ -1,9 +1,8 @@
 #include "header/SqStack.h"
-Status IsEmptyStack(SqStack s)
+int IsEmptyStack(Stack s)
 {
-    if(s->top == -1)
-    {
-        return SUCCESS;
-    }
-    return ERROR;
+    if(s.top == s.bottom)
+    return 1;
+    else
+    return 0;
 }

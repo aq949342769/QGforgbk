@@ -3,11 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-typedef enum Status 
+
+/*typedef enum Stack 
 {
 	ERROR = 0, 
 	SUCCESS = 1
-} Status;
+} Stack;*/
 
 
 typedef struct SqStack 
@@ -15,18 +16,19 @@ typedef struct SqStack
 	int  *bottom;
 	int  *top;
 	int   size;
-} SqStack;
+} Stack;
 
 
 //基于数组的顺序栈
-Status InitStack(SqStack **s,int size);//初始化栈
-Status IsEmptyStack(SqStack *s);//判断栈是否为空
-Status GetTopStack(SqStack *s,int *e); //得到栈顶元素
-Status ClearStack(SqStack *s);//清空栈
-Status DestroyStack(SqStack *s);//销毁栈
-Status StackLength(SqStack *s,int *length);//检测栈长度
-Status PushStack(SqStack *s,int data);//入栈
-Status PopStack(SqStack *s,int *data);//出栈
+Stack InitStack(Stack s,int size);//初始化栈
+int IsEmptyStack(Stack s);//判断栈是否为空
+void GetTopStack(Stack s); //得到栈顶元素
+Stack ClearStack(Stack s);//清空栈
+Stack DestroyStack(Stack s);//销毁栈
+void StackLength(Stack s);//检测栈长度
+Stack PushStack(Stack s,int data);//入栈
+Stack PopStack(Stack s);//出栈
+void Print(Stack s);//遍历元素
 void interface();
 
 #endif 
