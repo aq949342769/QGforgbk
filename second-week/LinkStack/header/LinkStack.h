@@ -1,6 +1,8 @@
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
 
+#include <stdio.h>
+#include <stdlib.h>
 typedef enum Status 
 {
     ERROR = 0, 
@@ -32,6 +34,6 @@ Status destroyLStack(LinkStack *s);//销毁栈
 Status LStackLength(LinkStack *s,int *length);//检测栈长度
 Status pushLStack(LinkStack *s,ElemType data);//入栈
 Status popLStack(LinkStack *s,ElemType *data);//出栈
-
+void print(LinkStack *s);
 
 #endif 

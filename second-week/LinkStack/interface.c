@@ -1,4 +1,4 @@
-#include "header/SqStack.h"
+#include "header/LinkStack.h"
 
 void interface()
 

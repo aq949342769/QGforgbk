@@ -1,5 +1,5 @@
 #include "header/SqStack.h"
-#include "interface.c"
+#include "Interface.c"
 #include "InitStack.c"
 #include "IsEmptyStack.c"
 #include "PushStack.c"
