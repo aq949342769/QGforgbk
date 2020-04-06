@@ -91,7 +91,10 @@ int main()
                 printf("enter failed, check your data and try again\n");
             }
             if(pushLStack(&stack, data))
-            printf("push success!\n");
+            {
+                printf("push success! now the stack is ");
+                print(&stack);
+            }
             
             
             break;
@@ -103,18 +106,12 @@ int main()
                 printf("the stack is empty or not exist\n");
                 break;
             }
-            ElemType data;
-            printf("enter the data that ready to pop:");
-            while (scanf("%d",&data) != 1)
+            if (popLStack(&stack))
             {
-                fflush(stdin);
-                printf("enter fail, please check and try again\n");
+                printf("pop success! now the stack is ");
+                print(&stack);
+                break;
             }
-            if (popLStack(&stack, &data))
-            {
-                printf("the data you enter has poped\n");
-            }
-            printf("the data is not exist!\n");
             break;
         }
       

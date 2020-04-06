@@ -38,6 +38,12 @@ int main()
         {
         //初始化栈
         case 1:{
+            if (s.bottom != NULL)
+            {
+                printf("the stack is exist! please destroy first!\n");
+                break;
+            }
+            
             int size;
             printf("请输入栈的大小(即可以装几个数据)：");
             while(scanf("%d",&size) != 1)
@@ -77,11 +83,15 @@ int main()
         //入栈
         case 6:{
             s = PushStack(s);
+            printf("now the stack is ");
+            Print(s);
             break;
         }
         //出栈
         case 7:{
             s = PopStack(s);
+            printf("now the stack is ");
+            Print(s);
             break;
         }
       

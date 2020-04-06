@@ -15,5 +15,6 @@ Status destroyLStack(LinkStack *s)
         temp = s->top;
     }
     free(s->top);
+    s->count--;
     return SUCCESS;
 }

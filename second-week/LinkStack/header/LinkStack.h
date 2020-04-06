@@ -33,7 +33,7 @@ Status clearLStack(LinkStack *s);//清空栈
 Status destroyLStack(LinkStack *s);//销毁栈
 Status LStackLength(LinkStack *s,int *length);//检测栈长度
 Status pushLStack(LinkStack *s,ElemType data);//入栈
-Status popLStack(LinkStack *s,ElemType *data);//出栈
+Status popLStack(LinkStack *s);//出栈
 void print(LinkStack *s);
 
 #endif 

@@ -7,9 +7,6 @@
         printf("please enter a corret number\n");
         return s;
     }
-    
-    
-    
     s.size = size;
     s.bottom = (int *)malloc((s.size) * sizeof (int));
     if (s.bottom == NULL)
