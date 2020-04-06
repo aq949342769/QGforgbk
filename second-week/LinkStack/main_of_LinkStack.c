@@ -22,6 +22,7 @@ int main()
         input_times++;
         while (input_times%10 == 0)
         {
+            system("cls");
             interface();break;
         }
         //Ñ¡Ôñ²Ëµ¥

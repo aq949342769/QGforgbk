@@ -24,6 +24,7 @@ int main()
         count++;
         while (count%10 == 0)
         {
+            system("cls");
             interface();break;
         }
         //Ñ¡Ôñ²Ëµ¥
