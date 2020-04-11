@@ -10,7 +10,6 @@ int main()
     Queue.rear = 0;
     Queue.size = 0;
 
-    int option;
     int input_times = 6;
     while (1)
     {
@@ -24,7 +23,7 @@ int main()
             break;
         }
         //Ñ¡Ôñ²Ëµ¥
-
+        int option = 0;
         scanf("%d", &option);
         while (option < 1 || option > 10)
         {
