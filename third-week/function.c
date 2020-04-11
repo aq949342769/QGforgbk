@@ -8,7 +8,7 @@ Status initQueue(sQueue *s, int size)
         printf("please enter a corret number\n");
         return ERROR;
     }
-    s->size = size;
+    s->size = size + 1;
     s->Arr = (int *)malloc((s->size) * sizeof(int));
     if (s->Arr == NULL)
     {
@@ -106,8 +106,9 @@ Status pushQueue(sQueue *s, int data)
     {
         s->Arr[s->rear] = data;
         s->rear = (s->rear + 1) % s->size;
+        return SUCCESS;
     }
-    return SUCCESS;
+    return ERROR;
 }
 //出队
 Status popQueue(sQueue *s)
@@ -130,10 +131,14 @@ void print(sQueue *s)
     }
 
     printf("front[");
-    for (int i = s->front; i < s->rear; i++)
+    int i = s->front;
+    while (i != s->rear) //这里要注意一下循环遍历！
     {
         printf("%d-", s->Arr[i]);
+        i++;
+        i = i % s->size;
     }
+
     printf("]rear\n");
 }
 //检测队列长度

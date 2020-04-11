@@ -109,6 +109,11 @@ int main()
                 printf("the stack is not exist\n");
                 break;
             }
+            if (isFullQueue(&Queue))
+            {
+                printf("the queue is fulled\n");
+                break;
+            }
 
             int data;
             printf("data:");
@@ -122,11 +127,12 @@ int main()
             {
                 printf("push success! now the queue is ");
                 print(&Queue);
+                break;
             }
 
             break;
         }
-        //³öÕ»
+        //³ö¶Ó
         case 8:
         {
             if (popQueue(&Queue))
