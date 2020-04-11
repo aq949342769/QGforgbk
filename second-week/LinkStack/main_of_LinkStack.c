@@ -16,92 +16,103 @@ int main()
     stack.count = -1;
     int option;
     int input_times = 9;
-    while(1)
+
+    while (1)
     {
         //刷新菜单
         input_times++;
-        while (input_times%10 == 0)
+        while (input_times % 10 == 0)
         {
             system("cls");
-            interface();break;
+            interface();
+            printf("please enter your option(only return the first choson option)\n");
+            break;
         }
         //选择菜单
-        scanf("%d",&option);
-        while(option < 1||option > 9)
+
+        scanf("%d", &option);
+        while (option < 1 || option > 9)
         {
             fflush(stdin);
             printf("enter failed,check and try again\n");
-            scanf("%d",&option);
+            scanf("%d", &option);
         }
+        fflush(stdin);
         switch (option)
         {
         //初始化栈
-        case 1:{
-            if(initLStack(&stack))
+        case 1:
+        {
+            if (initLStack(&stack))
                 printf("success!\n");
             else
                 printf("the stack is exist, please destroy first\n");
             break;
         }
         //判断栈是否为空
-        case 2:{
+        case 2:
+        {
             if (isEmptyLStack(&stack) == 1)
-            printf("is empty or not exist\n");
+                printf("is empty or not exist\n");
             else if (isEmptyLStack(&stack) == 0)
-            printf("is not empty\n");
-            break;   
+                printf("is not empty\n");
+            break;
         }
         //得到栈顶元素
-        case 3:{
+        case 3:
+        {
             ElemType e;
-            if(getTopLStack(&stack, &e))
-            printf("the top element is %d\n",e);
-            else 
-            printf("the stack is emtpy or not exist\n");
+            if (getTopLStack(&stack, &e))
+                printf("the top element is %d\n", e);
+            else
+                printf("the stack is emtpy or not exist\n");
             break;
         }
         //清空栈
-        case 4:{
+        case 4:
+        {
             if (clearLStack(&stack))
-            printf("the stack is clear now\n");
+                printf("the stack is clear now\n");
             else
-            printf("the stack is empty or not exist\n");            
+                printf("the stack is empty or not exist\n");
             break;
         }
         //销毁栈
-        case 5:{
-            if(destroyLStack(&stack))
+        case 5:
+        {
+            if (destroyLStack(&stack))
                 printf("the stack was destroied!\n");
             else
                 printf("the stack is not exist\n");
             break;
-        } 
+        }
         //入栈
-        case 6:{
+        case 6:
+        {
             if (stack.count < 0)
             {
                 printf("the stack is not exist\n");
                 break;
             }
-            
+
             ElemType data;
             printf("data:");
-            while (scanf("%d",&data) != 1)
+            while (scanf("%d", &data) != 1)
             {
                 fflush(stdin);
                 printf("enter failed, check your data and try again\n");
             }
-            if(pushLStack(&stack, data))
+            if (pushLStack(&stack, data))
             {
                 printf("push success! now the stack is ");
                 print(&stack);
             }
-            
-            
+
             break;
         }
         //出栈
-        case 7:{
+        case 7:
+        {
             if (stack.count <= 0)
             {
                 printf("the stack is empty or not exist\n");
@@ -115,9 +126,10 @@ int main()
             }
             break;
         }
-      
+
         //遍历栈元素
-        case 8:{
+        case 8:
+        {
             if (stack.count <= 0)
             {
                 printf("the stack is empty or not exist\n");
@@ -127,19 +139,20 @@ int main()
             break;
         }
         //检测栈长度
-        case 9:{
+        case 9:
+        {
             ElemType length;
-            if(LStackLength(&stack, &length))
-            printf("the length of the stack is %d\n", length);
+            if (LStackLength(&stack, &length))
+                printf("the length of the stack is %d\n", length);
             else
-            printf("the stack is empty or not exist\n");
+                printf("the stack is empty or not exist\n");
             break;
         }
         default:
-            {break;}
+        {
+            break;
         }
-        
-
+        }
     }
     return 0;
 }

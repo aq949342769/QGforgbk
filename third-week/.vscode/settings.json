@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "sqstack.h": "c",
+        "linkstack.h": "c",
+        "quene.h": "c",
+        "queue.h": "c"
+    }
+}
