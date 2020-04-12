@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: yishuzi;
+    src: url(font/ZaoZiGongFangTianLiTi-2.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("images/background.jpg");
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+/* 登录页面部分 */
+
+#register a:hover {
+    text-decoration: underline;
+}
+
+#forget a:hover {
+    text-decoration: underline;
+}
+
+
+
+.box1 img {
+    width: 15px;
+    position: absolute;
+    top: 180px;
+    right: 480px;
+}
+
+.box2 img {
+    width: 15px;
+    position: absolute;
+    top: 180px;
+    right: 480px;
+}
+
+/* 注册页面部分 */
+#registerPage,
+#logPage {
+    width: 50%;
+    margin: 0px auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 50px;
+}
+
+input {
+    width: 50%;
+    margin: 1px auto;
+    padding: 8px;
+    border-radius: 5px;
+    opacity: 0.95;
+}
+
+.button {
+    width: 53%;
+    margin-bottom: 10px;
+}
